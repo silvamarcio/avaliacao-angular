@@ -1,10 +1,10 @@
-<div *ngIf = "transporte">
+<h1>Detalhes</h1>
+
+<div>
     <h2>{{transporte.nome | uppercase}}</h2>
     <div><span>id:</span>{{transporte.id}}</div>
-    <div>
-      <label>Nome:
-        <input [(ngModel)] ="transporte.nome" placeholder="Nome">
-      </label>
-    </div>
+    <div><span>Nome:</span>{{trasporte.nome}}</div>
     <button (click)="goBack()">Voltar</button>
-    </div>
+    <button (click)="Save()">Gravar</button>
+</div>
+ 

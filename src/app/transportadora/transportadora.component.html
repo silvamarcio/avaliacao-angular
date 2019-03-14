@@ -1,8 +1,19 @@
 <h2>Minhas Transportadoras</h2>
+
+<div>
+    <label>Hero name:
+      <input #transpoName />
+    </label>
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button (click)="add(transportadora.value); transportadora.value=''">
+      add
+    </button>
+  </div>
+
 <ul class = "transporte">
-  <li *ngFor="let t of transportadora" >
-     <a routerLink="/detalhes/{{t.id}}">
-    <span class="badge">{{t.id}}</span>{{t.nome}} 
+  <li >
+     <a routerLink="/detalhes/{{transportadora.id}}">
+    <span class="badge">{{transportadora.id}}</span>{{transportadora.nome}} 
   </a>
   </li>
 </ul>

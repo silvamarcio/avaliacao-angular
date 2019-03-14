@@ -11,24 +11,30 @@ import { Transportadoras} from '../Transportadoras';
 })
 export class DetalhesComponent implements OnInit {
 
-  @Input() transporte: Transportadoras;
+   transporte: Transportadoras;
   constructor(
     private route: ActivatedRoute,
-    private trasnporteService: TransporteService,
+    private transporteService: TransporteService,
     private location: Location
   ) { }
 
   ngOnInit(): void {
-    this.getTransporta();
+   
   }
 
   getTransporta(): void{
     const id = +this.route.snapshot.paramMap.get('id');
-    this.trasnporteService.getTransportadorasId(id)
+    this.transporteService.getTransporId(id)
     .subscribe(transportadora => this.transporte = transportadora);
   }
 
   goBack(): void{
     this.location.back();
+  }
+
+  Save(): void{
+    this.transporteService.updateTranport(this.transporte)
+    .subscribe(() => this.goBack());
+
   }
 }
