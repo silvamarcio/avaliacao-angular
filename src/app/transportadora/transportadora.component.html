@@ -1,0 +1,12 @@
+<h2>Minhas Transportadoras</h2>
+<ul class = "transporte">
+  <li *ngFor="let t of transportadora" >
+     <a routerLink="/detalhes/{{t.id}}">
+    <span class="badge">{{t.id}}</span>{{t.nome}} 
+  </a>
+  </li>
+</ul>
+
+
+
+
