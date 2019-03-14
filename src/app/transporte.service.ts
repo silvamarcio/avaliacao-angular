@@ -10,7 +10,7 @@ import {MessageService} from './message.service';
 })
 export class TransporteService {
 
-  private TransportadorasUrl ='api/transportadoras'; //URL To WEB API
+  private TransportadorasUrl ='http://hostgator.prolins.com.br/teste/api/transportadora/2'; //URL To WEB API
   constructor(
     private http: HttpClient,
     private messageService: MessageService)
